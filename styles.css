@@ -31,7 +31,7 @@ body {
 
 .calculator-display h1 {
     margin: 0;
-    padding: 25px;
+    padding: 20px;
     font-size: 45px;
     font-family: 'Lucida Console', sans-serif;
     font-weight: 200;
@@ -64,7 +64,57 @@ body {
     padding: 10px;
   }
 
+  button {
+    min-height: 50px;
+    font-size: 20px;
+    font-weight: 200;
+    font-family: 'Lucida Console', sans-serif;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background: rgb(201, 201, 201);
+  }
+
+  button:hover {
+    filter: brightness(115%);
+  }
+
+  button:active {
+    transform: translateY(1.5px);
+  }
+
+  button:focus {
+    filter: brightness(115%);
+    outline: none;
+  }
+
+  .operator {
+    background: rgb(94, 94, 94);
+    color: white;
+    font-size: 30px;
+  }
+
+  .clear {
+    background: rgb(255, 68, 68);
+    color: white;
+  }
+
   .equal-sign {
     grid-column: 4;
     grid-row: 2 / span 4;
+    background: rgb(102, 82, 255);
+  }
+
+  .clear:hover,
+  .equal-sign:hover,
+  .clear:focus,
+  .equal-sign:focus {
+    filter: brightness(85%);
+  }
+
+  /* Media Queries: Large Smartphones (vertical) */
+  @media screen and (max-width: 600px) {
+    .calculator {
+        width: 95%;
+    }
   }
